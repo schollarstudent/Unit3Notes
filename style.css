@@ -9,7 +9,7 @@ label {
     display: block;
     line-height: 1.25rem;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     color: #374151;
 }
 
@@ -18,7 +18,7 @@ input[type="text"], textarea, select{
     line-height: 1.25rem;
     border: 1px solid #d1d5db;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 10px 12px;
     margin-bottom: 12px;
     color: #374151;
 }
@@ -45,16 +45,16 @@ input[type="checkbox"] ~ label, input[type="radio"] ~ label {
 }
 
 section{
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 section header{
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .row {
     display: flex;
-    gap: 16px;
+    gap: 15px;
 }
 
 
@@ -68,7 +68,7 @@ section header{
     background: white;
     padding: 20px;
     border-radius: 12px;
-    width: 500px;
+    width: 700px;
 }
 .center{
     display: flex;

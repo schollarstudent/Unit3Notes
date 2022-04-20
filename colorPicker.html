@@ -14,6 +14,15 @@
      .blue{
          background-color: blue;
      }
+     .orange{
+         background-color: orange;
+     }
+     .white{
+         background-color: white;
+     }
+     .black{
+         background-color: black;
+     }
      .pink{
          color: pink;
      }
@@ -22,6 +31,15 @@
      }
      .purple{
          color:purple;
+     }
+     .yellow{
+         color: yellow;
+     }
+     .darkGreen{
+         color: darkgreen;
+     }
+     .brown{
+         color: brown;
      }
  </style>
 </head>
@@ -59,10 +77,15 @@
     const green = document.getElementById('2');
     const blue = document.getElementById('3');
     const orange = document.getElementById('4');
+    const white = document.getElementById('5');
+    const black = document.getElementById('6');
 
     const pink = document.getElementById('7');
     const teal = document.getElementById('8');
     const purple = document.getElementById('9');
+    const yellow = document.getElementById('10');
+    const darkGreen = document.getElementById('11');
+    const brown = document.getElementById('12');
 
     const clearButton = document.getElementById('clear');
 
@@ -79,6 +102,18 @@
        removeBGColor();
        content.classList.add('blue');
    });
+   orange.addEventListener('click',function (e) {
+       removeBGColor();
+       content.classList.add('orange')
+   });
+   white.addEventListener('click',function (e){
+       removeBGColor();
+       content.classList.add('white')
+   });
+    black.addEventListener('click',function (e){
+        removeBGColor();
+        content.classList.add('black')
+    });
    pink.addEventListener('click',function (e){
        removeTextColor();
        content.classList.add('pink');
@@ -91,6 +126,18 @@
         removeTextColor();
         content.classList.add('purple');
     });
+    yellow.addEventListener('click',function (e){
+        removeTextColor();
+        content.classList.add('yellow');
+    });
+    darkGreen.addEventListener('click',function (e){
+        removeTextColor();
+        content.classList.add('darkGreen');
+    });
+    brown.addEventListener('click',function (e){
+        removeTextColor();
+        content.classList.add('brown');
+    });
 
     clearButton.addEventListener('click',function(e){
         removeTextColor();
@@ -101,12 +148,18 @@
         content.classList.remove('red');
         content.classList.remove('green');
         content.classList.remove('blue');
+        content.classList.remove('orange');
+        content.classList.remove('white');
+        content.classList.remove('black');
     }
 
     function removeTextColor(){
         content.classList.remove('pink');
         content.classList.remove('teal');
         content.classList.remove('purple');
+        content.classList.remove('yellow');
+        content.classList.remove('darkGreen');
+        content.classList.remove('brown');
     }
 </script>
 </body>
