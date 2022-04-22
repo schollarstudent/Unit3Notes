@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>List</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Item list</h1>
+        <div class="row">
+            <div>
+                <label for="first">Items:</label>
+                <input type="text" id="first" name="first_name" placeholder="Cody">
+            </div>
+            <div>
+                <label for="last">Another item:</label>
+                <input type="text" id="last" name="last_name" placeholder="Farm">
+                <p class="hidden"></p>
+            </div>
+            <button name="clear">Add item</button>
+        </div>
+    </div>
+</div>
+<script>
+    const firstName = document.getElementById('first');
+    const lastName= document.getElementById('last');
+    const full = document.querySelector('p');
+    const clearButton = document.querySelector('[name="clear"]');
+
+    firstName.addEventListener('change', nameCreator);
+    function nameCreator(){
+        let first=firstName.value;
+        let last = lastName.value;
+        let fullName = `Hello ${first} ${last}!`;
+        if (fullName.length>1){
+            full.classList.remove("hidden")
+        } else{
+            full.classList.add("hidden")
+        }
+        full.textContent = `Item added ${fullName}!`;
+    }
+
+
+    lastName.addEventListener('change',function(e){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `Other item added ${first} ${last}!`;
+    });
+
+    clearButton.addEventListener('click',function(e){
+        firstName.value = "";
+        lastName.value = "";
+        full.textContent = "";
+    })
+</script>
+
+</body>
+</html>
