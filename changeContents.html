@@ -38,20 +38,20 @@
     function nameCreator(){
         let first=firstName.value;
         let last = lastName.value;
-        let fullName = `Hello ${first} ${last}!`;
+        let fullName = ` ${first} ${last}!`;
         if (fullName.length>1){
             full.classList.remove("hidden")
         } else{
             full.classList.add("hidden")
         }
-        full.textContent = `Hello ${fullName}!`;
+        full.textContent = `${fullName}!`;
     }
 
 
     lastName.addEventListener('change',function(e){
         let first = firstName.value;
         let last = lastName.value;
-        let fullName = `Hello ${first} ${last}!`;
+        let fullName = `${first} ${last}!`;
     });
 
     clearButton.addEventListener('click',function(e){
