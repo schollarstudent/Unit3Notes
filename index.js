@@ -1,5 +1,8 @@
 const cardList = document.querySelector('.cardList');
+const score= document.querySelector('h3');
+let numPoints = 0;
 
+score.textContent = 'Score.${numPoints}';
 buildBoard();
 
 let interval = setInterval(function() {
@@ -7,6 +10,8 @@ let interval = setInterval(function() {
 }, 2000);
 
 cardList.addEventListener('click',function(e) {
+    numPoints++;
+    score.textContent = 'Score:${numPoints}';
     console.log(e.target);
     if (e.target.matches('.cardList')){
         return
@@ -14,6 +19,7 @@ cardList.addEventListener('click',function(e) {
     if (e.target.classList.contains('active')){
         e.target.classList.remove('active');
         e.target.classList.add('inactive');
+        numPoints++;
         return
     }
     e.target.remove();
