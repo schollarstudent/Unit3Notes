@@ -2,7 +2,7 @@ const cardList = document.querySelector('.cardList');
 const score= document.querySelector('h3');
 let numPoints = 0;
 
-score.textContent = 'Score.${numPoints}';
+score.textContent = 'score.${numPoints}';
 buildBoard();
 
 let interval = setInterval(function() {
@@ -11,7 +11,7 @@ let interval = setInterval(function() {
 
 cardList.addEventListener('click',function(e) {
     numPoints++;
-    score.textContent = 'Score:${numPoints}';
+    score.textContent = 'score.${numPoints}';
     console.log(e.target);
     if (e.target.matches('.cardList')){
         return
